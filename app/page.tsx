@@ -1,3 +1,11 @@
+"use client"
+import Navbar from './components/Navbar'
+
 export default async function Home() {
-  return <div className="text-white">Home Page</div>;
+  return (
+    <>
+    <Navbar/>
+    <div className="text-white">Home Page</div>
+    </>
+);
 }
