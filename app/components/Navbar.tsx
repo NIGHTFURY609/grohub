@@ -1,3 +1,5 @@
+"use client";
+
 import React,{useState} from 'react'
 import logo from '../../public/logo.png'
 import Image from 'next/image';
@@ -5,7 +7,7 @@ import Link from 'next/link';
 import {Menu,X} from 'lucide-react'
 
 const NavItems = [
-  { label: 'Home', href: '/' },
+  { label: 'Dashboard', href: '/dashboard' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Contact', href: '/contact' },
@@ -17,21 +19,21 @@ export default function Navbar() {
         setNav(!nav)
     }
   return (
-    <nav className="shadow-md py-4 px-10 text-white text-l">
-      <div className="container flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold w-12 h-12">
+    <nav className="shadow-md py-4 px-10 text-white text-l ">
+      <div className=" flex justify-between items-center">
+        <Link href="/dashboard" className="text-xl font-bold w-12 h-12">
           <Image src={logo} alt='logo'/>
         </Link>
-        <ul className='hidden lg:flex justify-around items-center min-w-[650px] '>
+        <ul className='hidden lg:flex justify-around items-center  min-w-[650px] '>
             {
                 NavItems.map((item,index)=>(
-                    <li key={index} className=''><Link href={item.href}>{item.label}</Link></li>
+                    <li key={index} className='hover:text-[#53b787]'><Link href={item.href}>{item.label}</Link></li>
                 ))
             }
         </ul>
         <div className='hidden lg:flex items-center'>
-            <Link href='#' className='border-2 rounded-xl p-2 px-10 mx-4'>Sign up</Link>
-            <Link href="#" className='border-2 rounded-xl p-2 px-2'>Create an Account</Link>
+            <Link href='#' className='border-2 rounded-xl p-2 px-10 mx-4 hover:bg-white hover:text-black'>Sign up</Link>
+            <Link href="#" className='border-2 rounded-xl p-2 px-2 hover:bg-white hover:text-black'>Create an Account</Link>
         </div>
         <div className='lg:hidden' onClick={handlenav}>
             {nav?<X/>:<Menu/>}
