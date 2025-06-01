@@ -49,7 +49,7 @@ export default function Navbar() {
         animate='enter' 
         exit='exit' 
         initial='initial'
-        className="absolute top-22 right-0 w-[85%] h-[90%] text-xl p-16 bg-[#444444] text-white flex flex-col justify-around lg:hidden">
+        className="absolute top-22 right-0 w-[85%] h-[90%] text-xl p-16 bg-[#444444] text-white flex flex-col justify-evenly lg:hidden">
           <motion.ul 
           variants={slide} 
           animate='enter' 
