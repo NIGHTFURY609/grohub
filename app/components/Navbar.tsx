@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {Menu,X} from 'lucide-react'
 import {motion} from 'motion/react'
-import {menuSlide,slide} from './anim'
+import {menuSlide,slide} from '../utils/anim'
 import { AnimatePresence } from 'motion/react';
 
 const NavItems = [
@@ -49,7 +49,7 @@ export default function Navbar() {
         animate='enter' 
         exit='exit' 
         initial='initial'
-        className="absolute top-22 right-0 w-[85%] h-[90%] text-xl p-16 bg-[#444444] text-white flex flex-col justify-evenly lg:hidden">
+        className="absolute top-22 right-0 w-full h-[90%] text-xl p-16 bg-[#444444] text-white flex flex-col justify-evenly lg:hidden">
           <motion.ul 
           variants={slide} 
           animate='enter' 
